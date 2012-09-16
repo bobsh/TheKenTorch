@@ -18,13 +18,16 @@ public class LightScreen extends Activity {
 
         int brightnessMode = 0;
         try {
-            brightnessMode = Settings.System.getInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS_MODE);
+            brightnessMode = Settings.System.getInt(getContentResolver(), 
+                    Settings.System.SCREEN_BRIGHTNESS_MODE);
         } catch (SettingNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
         if (brightnessMode == Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC) {
-            Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+            Settings.System.putInt(getContentResolver(), 
+                    Settings.System.SCREEN_BRIGHTNESS_MODE, 
+                    Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
         }
 
         WindowManager.LayoutParams layoutParams = getWindow().getAttributes();
