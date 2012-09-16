@@ -36,7 +36,7 @@ public class LightScreen extends Activity {
 
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         PowerManager.WakeLock wakeLock = pm.newWakeLock(
-                PowerManager.SCREEN_DIM_WAKE_LOCK, "My wakelook");
+                PowerManager.FULL_WAKE_LOCK, "My wakelook");
         wakeLock.acquire();
     }
 
