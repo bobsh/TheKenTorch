@@ -1,7 +1,7 @@
 The Ken Torch
 =============
 
-Simple light application for the Android.
+Simple light application for the Android OS.
 
 Attribution
 -----------
